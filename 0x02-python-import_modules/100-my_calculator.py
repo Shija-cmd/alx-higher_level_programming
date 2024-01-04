@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-""" Importing sys and operations functions
-
-Auth: Juma Shija
-"""
 if __name__ == "__main__":
     import sys
 
