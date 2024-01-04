@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-""" Function magic_calculation
-
-Auth: Juma Shija
-"""
 def magic_calculation(a, b):
 """ Importing the function add and sub """
     from magic_calculation_102 import add, sub
