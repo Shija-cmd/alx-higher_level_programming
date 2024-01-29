@@ -1,28 +1,28 @@
 #!/usr/bin/python3
-"""Describes a class Rectangle"""
+"""Defines a class Rectangle"""
 
 
 class Rectangle:
     """
-    Class that describes properties of rectangle.
+    Class that defines properties of rectangle by: (based on 2-rectangle.py).
 
     Attributes:
-        width (int): Width of the rectangle.
-        height (int): Height of the rectangle.
+        width (int): width of the rectangle.
+        height (int): height of the rectangle.
     """
     def __init__(self, width=0, height=0):
-        """Makes a new instances of Rectangle.
+        """Creates new instances of Rectangle.
 
         Args:
-            width (int, optional): Width of rectangle. Defaults to 0.
-            height (int, optional): Height of rectangle. Defaults to 0.
+            width (int, optional): width of rectangle. Defaults to 0.
+            height (int, optional): height of rectangle. Defaults to 0.
         """
         self.height = height
         self.width = width
 
     @property
     def width(self):
-        """Width retriever.
+        """Width retriver.
 
         Returns:
             int: the width of the rectangle.
@@ -31,7 +31,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Height retriever.
+        """Height retriver.
 
         Returns:
             int: the height of the rectangle.
@@ -40,10 +40,10 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Properties for width of rectangle.
+        """Property setter for width of rectangle.
 
         Args:
-            value (int): Width of the rectangle.
+            value (int): width of the rectangle.
 
         Raises:
             TypeError: if width is not an integer.
@@ -58,10 +58,10 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """Properties for height of rectangle.
+        """Property setter for height of recyangle.
 
         Args:
-            value (int): Height of the rectangle.
+            value (int): height of the rectangle.
 
         Raises:
             TypeError: if height is not an integer.
@@ -75,7 +75,7 @@ class Rectangle:
             self.__height = value
 
     def area(self):
-        """Finds an area of a rectangle.
+        """Calculates area of a rectangle.
 
         Returns:
             int: area.
@@ -83,7 +83,7 @@ class Rectangle:
         return self.__height * self.__width
 
     def perimeter(self):
-        """Finds the  perimeter of a rectangle
+        """Calculates perimeter of a rectangle
 
         Returns:
             int: perimeter.
@@ -94,7 +94,7 @@ class Rectangle:
             return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        """Displays the rectangle with the character # .
+        """Prints the rectangle with the character # .
 
         Returns:
             str: the rectangle
@@ -108,8 +108,8 @@ class Rectangle:
             for j in range(self.__width):
                 rectangle.append("#")
             rectangle.append("\n")
-			
 
-		rectangle.pop()
+        # removes blank lines
+        rectangle.pop()
 
         return "".join(rectangle)
