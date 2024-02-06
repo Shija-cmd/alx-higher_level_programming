@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" Function to print class to json file """
+"""describe function from class to json serialization"""
+
 
 def class_to_json(obj):
-    return vars(obj)
+    """returns dictionary description for json serialization"""
+    return obj.__dict__
