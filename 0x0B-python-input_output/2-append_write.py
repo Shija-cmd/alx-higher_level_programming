@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-""" Function to append a file with utf-8
-"""
+"""describes function to appends string to text file"""
+
 
 def append_write(filename="", text=""):
-    with open(filename, "a", encoding="utf-8") as f:
+    """appends strings to text file"""
+    with open(filename, 'a') as f:
         return f.write(text)
