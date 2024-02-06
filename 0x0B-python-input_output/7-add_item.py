@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Scripts to add item in a file"""
+"""script to add all arguments to a Python list and save to a file"""
 
 from sys import argv
 
