@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-""" Importing json
-"""
+"""describe function to return json representatin of an object"""
 
-import json
-"""Function to print json string
-"""
 
 def to_json_string(my_obj):
-    return json.dumps(my_obj)
+    """returns json representation of an object"""
+    import json
+    return json.dumps(my_obj, ensure_ascii=False)
