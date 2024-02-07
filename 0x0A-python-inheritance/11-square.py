@@ -1,26 +1,30 @@
 #!/usr/bin/python3
+"""
+    a quare class
+"""
 Rectangle = __import__('9-rectangle').Rectangle
-"""
-===================================
-class BaseGeometry in module
-===================================
-"""
 
 
 class Square(Rectangle):
-    """Square class that inherits from Rectangle that inherits BaseGeometry"""
-
+    """
+      a  square Class inheriting other class
+    """
     def __init__(self, size):
-        """Method for initialized the attrubutes"""
-
-        super().__init__(size, size)
-        self.integer_validator("size", size)
+        """
+            Initialising the square
+        """
+        self.integer_validator('size', size)
         self.__size = size
+        super().__init__(size, size)
 
     def area(self):
-        """rectangle area"""
-
+        """
+        defines area
+        """
         return self.__size ** 2
 
     def __str__(self):
-        return "[Square] {}/{}".format(self.__size, self.__size)
+        """
+            Use of __str__
+        """
+        return ("[Square] {:d}/{:d}".format(self.__size, self.__size))
