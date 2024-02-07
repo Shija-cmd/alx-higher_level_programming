@@ -1,16 +1,16 @@
 #!/usr/bin/python3
 """
 ===========================
-Class Mylist Module
+Module with class MyList
 ===========================
 """
 
 
 class MyList(list):
-    """method print_sorted in the Class MyList"""
+    """Class with method print_sorted"""
     pass
 
     def print_sorted(self):
-        """Method to sort a list"""
+        """Methot that sorted a list"""
 
         print(sorted(list(self)))
