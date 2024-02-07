@@ -8,7 +8,7 @@ class BaseGeometry in module
 
 
 class Rectangle(BaseGeometry):
-    """Rectangle class that inherits from BaseGeometry"""
+    """Rectangle class that inheriting from BaseGeometry"""
 
     def __init__(self, width, height):
         """Method for initialized the attrubutes"""
