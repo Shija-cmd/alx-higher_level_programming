@@ -1,6 +1,12 @@
 #!/usr/bin/python3
-""" lookup module method """
+"""
+=============================
+Method lookup module
+=============================
+"""
 
 
 def lookup(obj):
-	return dir(obj)
+    """Function to return the attributes for an object"""
+
+    return dir(obj)
