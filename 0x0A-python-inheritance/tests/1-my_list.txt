@@ -1,5 +1,5 @@
 ============================================
-Using 1-my_list.txt
+How to use 1-my_list.txt
 ============================================
 
 This library is very simple, since it only has one function called
