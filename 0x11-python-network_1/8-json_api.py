@@ -3,19 +3,20 @@
 script that takes in a letter and sends a POST request to
 http://0.0.0.0:5000/search_user with the letter as a parameter.
 """
+import sys
 import requests
-from sys import argv
 
-if __name__ == '__main__':
-    p = argv[1] if len(argv) == 2 else ""
-    url = 'http://0.0.0.0:5000/search_user'
-    req = requests.post(url, data={'p': p})
+
+if __name__ == "__main__":
+    l = "" if len(sys.argv) == 1 else sys.argv[1]
+    p = {"q": l}
+
+    req = requests.post("http://0.0.0.0:5000/search_user", data=p)
     try:
-        req_dict = req.json()
-        id, name = req_dict.get('id'), req_dict.get('name')
-        if len(req_dict) == 0 or not id or not name:
+        response = req.json()
+        if response == {}:
             print("No result")
         else:
-            print("[{}] {}".format(req_dict.get('id'), req_dict.get('name')))
-    except Exception:
+            print("[{}] {}".format(response.get("id"), response.get("name")))
+    except ValueError:
         print("Not a valid JSON")
